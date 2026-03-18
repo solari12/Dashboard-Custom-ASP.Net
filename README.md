@@ -191,3 +191,10 @@ If you want to [Free Admin Templates](https://themeselection.com/item/category/f
 - [Instagram](https://www.instagram.com/themeselection/)
 - [Discord](https://discord.com/invite/kBHkY7DekX)
 - [YouTube](https://www.youtube.com/channel/UCuryo5s0CW4aP83itLjIdZg)
+
+node -v #Node >= 14
+npm -v #Npm >= 6
+
+npm install/ npm install --legacy-peer-deps
+
+gulp
