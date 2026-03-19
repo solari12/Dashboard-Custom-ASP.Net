@@ -198,3 +198,8 @@ npm -v #Npm >= 6
 npm install/ npm install --legacy-peer-deps
 
 gulp
+
+dotnet run
+
+http://localhost:5055
+
