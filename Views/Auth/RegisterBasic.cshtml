@@ -25,19 +25,19 @@
           <h4 class="mb-1">Adventure starts here 🚀</h4>
           <p class="mb-6">Make your app management easy and fun!</p>
 
-          <form id="formAuthentication" class="mb-6" action="/" method="POST">
+          <form asp-action="RegisterBasic" asp-controller="Auth" method="post" class="mb-6">
             <div class="mb-6">
               <label for="username" class="form-label">Username</label>
-              <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" autofocus />
+            <input type="text" class="form-control" id="username" name="Username" placeholder="Enter your username" autofocus />
             </div>
             <div class="mb-6">
               <label for="email" class="form-label">Email</label>
-              <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" />
+            <input type="text" class="form-control" id="email" name="Email" placeholder="Enter your email" />
             </div>
             <div class="form-password-toggle">
               <label class="form-label" for="password">Password</label>
               <div class="input-group input-group-merge">
-                <input type="password" id="password" class="form-control" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+            <input type="password" id="password" class="form-control" name="Password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
                 <span class="input-group-text cursor-pointer"><i class="icon-base bx bx-hide"></i></span>
               </div>
             </div>

@@ -201,5 +201,33 @@ gulp
 
 dotnet run
 
+## 🧠 Tech stack
+
+- ASP.NET Core MVC
+- Entity Framework Core
+- SQL Server
+
 http://localhost:5055
 
+### 1. Clone project
+git clone ...
+
+### 2. Cài package
+dotnet restore
+
+### 3. Cấu hình database
+
+Sửa file appsettings.json:
+
+"ConnectionStrings": {
+  "DefaultConnection": "Server=.;Database=DashboardDb;Trusted_Connection=True;"
+}
+
+### 4. Chạy migration
+s
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+### 5. Run project
+
+dotnet run
