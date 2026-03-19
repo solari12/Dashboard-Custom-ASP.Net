@@ -192,8 +192,7 @@ If you want to [Free Admin Templates](https://themeselection.com/item/category/f
 - [Discord](https://discord.com/invite/kBHkY7DekX)
 - [YouTube](https://www.youtube.com/channel/UCuryo5s0CW4aP83itLjIdZg)
 
-node -v #Node >= 14
-npm -v #Npm >= 6
+node -v #Node >= 14 npm -v #Npm >= 6
 
 npm install/ npm install --legacy-peer-deps
 
@@ -201,33 +200,25 @@ gulp
 
 dotnet run
 
-## 🧠 Tech stack
-
-- ASP.NET Core MVC
-- Entity Framework Core
-- SQL Server
-
+🧠 Tech stack
+ASP.NET Core MVC
+Entity Framework Core
+SQL Server
 http://localhost:5055
 
-### 1. Clone project
+1. Clone project
 git clone ...
 
-### 2. Cài package
+2. Cài package
 dotnet restore
 
-### 3. Cấu hình database
-
+3. Cấu hình database
 Sửa file appsettings.json:
 
-"ConnectionStrings": {
-  "DefaultConnection": "Server=.;Database=DashboardDb;Trusted_Connection=True;"
-}
+"ConnectionStrings": { "DefaultConnection": "Server=.;Database=DashboardDb;Trusted_Connection=True;" }
 
-### 4. Chạy migration
-s
-dotnet ef migrations add InitialCreate
-dotnet ef database update
+4. Chạy migration
+s dotnet ef migrations add InitialCreate dotnet ef database update
 
-### 5. Run project
-
+5. Run project
 dotnet run
