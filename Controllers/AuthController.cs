@@ -66,4 +66,10 @@ public class AuthController : Controller
 
     return RedirectToAction("Index", "Home");
   }
+
+  [HttpPost]
+  public IActionResult Logout() {
+    HttpContext.Session.Clear();
+    return RedirectToAction("LoginBasic");
+  }
 }
