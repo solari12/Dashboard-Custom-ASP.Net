@@ -20,6 +20,11 @@ public class AuthController : Controller
   [HttpPost]
   public IActionResult RegisterBasic(RegisterModel model)
   {
+    if (!ModelState.IsValid)
+    {
+      return View(model);
+    }
+
     var user = new User
     {
       Username = model.Username,
@@ -30,5 +35,35 @@ public class AuthController : Controller
     _context.SaveChanges();
 
     return RedirectToAction("LoginBasic");
+  }
+
+  [HttpPost]
+  public IActionResult LoginBasic(LoginModel model)
+  {
+    if (!ModelState.IsValid)
+    {
+      return View(model);
+    }
+
+    var user = _context.Users
+        .FirstOrDefault(u => u.Username == model.Username || u.Email == model.Username);
+
+    if (user == null)
+    {
+      ModelState.AddModelError("", "Sai username hoặc password");
+      return View(model);
+    }
+
+    bool isValid = BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash);
+
+    if (!isValid)
+    {
+      ModelState.AddModelError("", "Sai username hoặc password");
+      return View(model);
+    }
+
+    HttpContext.Session.SetString("Username", user.Username);
+
+    return RedirectToAction("Index", "Home");
   }
 }
